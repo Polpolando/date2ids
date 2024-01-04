@@ -7,12 +7,13 @@ This script converts a date to the Imperial Dating System used in the Warhammer 
 date2ids [flags] [date]
 ```
 ### Description
-Displays date in the Imperial Dating System format.
-Returns todays date converted to IDS if ran without any arguments. If you specify a date or you use the flags it will convert that instead.
-If you don't give it all the date information it will assume they are 0.
-Given both date and flags it will always prioritise information passed through with the flags.
+This script displays the date in the Imperial Dating System (IDS) format. If run without any arguments, it returns today's date converted to IDS. You can also specify a date or use flags for customization.
 
-### Passing arguments is currently **not implemented**
+- If you provide a specific date or use flags, the script will convert that date to IDS.
+- If you don't provide all the date information, the script will assume missing components are 0.
+- When both a date and flags are given, the script prioritizes the information passed through the flags.
+
+### Passing arguments is currently not implemented
 ### Date
     The date you want to pass needs to be formatted as: DD-MM-YY or DD/MM/YY
     If you pass the date it will assume the time of day is 00:00, unless you specify it with flags.
