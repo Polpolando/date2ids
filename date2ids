@@ -1,0 +1,19 @@
+#!/bin/bash
+# Author: Polando
+# Date: 04-01-24
+# This script converts today's date to the Imperial Dating System from Warhammer 40k
+# Usage: ./date2ids.sh
+# TODO: Add support for user inputted dates
+
+MARK_CONST=11407955 # True mark const is 1.11407955 but bash cant handle floats
+MARK_EXPONENT=$((10**8))
+year=$(date +%Y)
+
+day_of_year=$(date +%j)
+hour=$(date +%H)
+
+millenium=$(( (year/1000) + 1 ))
+year_fraction=$(( (((day_of_year * 24) + hour) * MARK_CONST) / MARK_EXPONENT ))
+year_without_millenium=$(( year % 1000 ))
+
+printf "0.%03d.%03d.M%d\n" "$year_fraction" "$year_without_millenium" "$millenium"
