@@ -5,6 +5,8 @@
 # Usage: ./date2ids.sh
 # TODO: Add support for user inputted dates
 
+# Converts the date using the information give on the wh40k wiki
+# https://warhammer40k.fandom.com/wiki/Imperial_Dating_System#Year_Fraction
 MARK_CONST=11407955 # True mark const is 1.11407955 but bash cant handle floats
 MARK_EXPONENT=$((10**8))
 year=$(date +%Y)
